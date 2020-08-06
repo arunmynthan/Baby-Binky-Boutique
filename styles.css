@@ -1,0 +1,1434 @@
+/* GLOBAL SETUP */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  letter-spacing: 0.1rem;
+  scroll-behavior: smooth;
+}
+
+.temp {
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  padding: 5rem;
+}
+
+.section-center {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.front-span {
+  color: white;
+}
+
+.logo-span2 {
+  color: rgb(149, 201, 188);
+}
+
+.logo-span {
+  color: rgb(255, 222, 192);
+}
+
+.step-color {
+  color: black;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+/* GLOBAL SETUP ENDS */
+
+/* SIDE NAVIGATION */
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(209, 208, 208);
+  z-index: 10;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  transform: translate(-100%);
+  transition: all 1s 1s;
+}
+
+.shownav {
+  transform: translate(0);
+}
+
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.nav-close {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s 0.3s;
+  color: rgb(107, 187, 163);
+}
+
+.nav-close:hover {
+  transform: translateY(1.25);
+  color: rgb(255, 222, 192);
+}
+
+.nav-items {
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 2rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-family: "Lexend Tera";
+  color: white;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: rgb(200, 233, 224);
+  color: rgb(255, 255, 255);
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--clr-primary-light);
+}
+
+.social-navbar {
+  margin-left: 2.5rem;
+}
+
+/* MAIN NAVIGATION */
+
+.fixed-bar {
+  position: fixed !important;
+
+  z-index: 100 !important;
+  background: rgba(63, 62, 62, 0.7) !important;
+  width: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.logo-container h1 {
+  color: white;
+  font-family: "Lexend Tera";
+  font-size: 1rem;
+}
+
+.main-nav {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.nav-section {
+  position: absolute;
+  top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  z-index: 3;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  place-items: center;
+  margin-left: 1rem;
+}
+
+.menu-list a {
+  text-decoration: none;
+  padding: 1rem;
+
+  color: rgb(255, 255, 255);
+  font-family: "Lexend Tera";
+  transition: ease-in 0.3s 0.3s;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.menu-list a:hover {
+  color: rgb(255, 222, 192);
+}
+
+.main-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.header-icons {
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+  transition: ease-in 0.3s 0.3s;
+}
+
+.header-icons:hover {
+  color: rgb(255, 222, 192);
+}
+
+/* NAGIVATION ENDS */
+
+/* HEADER */
+
+.main-wallpaper {
+  display: flex;
+}
+
+.left-wallpaper {
+  background: rgb(185, 185, 185);
+
+  height: 100vh;
+  flex: 1;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 90%;
+  font-family: "Lexend Tera";
+  overflow: hidden;
+}
+
+.content-title {
+  color: white;
+  min-width: 90%;
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  text-transform: capitalize;
+  margin-left: 2rem;
+}
+
+.title-container p {
+  color: white;
+  margin-top: 2rem;
+}
+
+.right-wallpaper {
+  background: rgb(149, 201, 188);
+  height: 100vh;
+  flex: 1;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 4rem;
+  margin-left: -3rem;
+}
+
+.social-icon {
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: ease-in 0.3s 0.3s;
+}
+
+.social-icon:hover {
+  color: rgb(255, 222, 192);
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 90%;
+}
+
+.logo-img {
+  height: 36vh;
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(184, 177, 177);
+  border: none;
+  height: 2rem;
+  width: 15rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  transition: ease-in 0.3s 0.3s;
+  text-align: center;
+  padding: 0.25rem;
+}
+
+.shopnow-btn {
+  transition: ease-in 0.3s 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover a {
+  color: gray;
+}
+
+.btn:hover {
+  background: rgb(207, 204, 204);
+}
+
+/* HEADER ENDS */
+
+/* BAR */
+
+.bar {
+  height: 0.2rem;
+  width: 100%;
+  background: rgb(255, 222, 192);
+}
+
+/* BAR ENDS*/
+
+/* ABOUT US */
+
+.aboutus-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  color: white;
+  font-family: "Lexend Tera";
+  font-size: 1rem;
+}
+
+.aboutus-section {
+  background: rgb(185, 185, 185);
+
+  max-width: 100%;
+}
+
+.article-title h4 {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  min-width: 60%;
+  margin-left: 3rem;
+}
+
+.about-text {
+  min-width: 70%;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.disha {
+  height: 33vh;
+
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+  position: relative;
+
+  object-fit: cover;
+  z-index: 0;
+  border-radius: 0.5rem;
+}
+
+.about-btn {
+  display: inline-block;
+  background: rgb(149, 201, 188);
+  border: none;
+  height: 2rem;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  width: 12rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.about-link {
+  text-decoration: none;
+  color: white;
+  transition: ease-in 0.3s 0.3s;
+}
+
+.about-btn:hover a {
+  color: rgb(133, 133, 133);
+}
+
+.about-btn:hover {
+  background: rgb(163, 233, 216);
+}
+
+/* ABOUT US ENDS*/
+
+/* IMAGES ROW */
+
+.imagesrow-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+}
+
+.imagesrow-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(82, 81, 81, 0.8);
+}
+
+.button-container {
+  position: absolute;
+
+  border: 0.2rem solid white;
+  left: 43%;
+  bottom: 22%;
+  transition: ease-in 0.3s 0.3s;
+  border-radius: 0.3rem;
+}
+
+.product-link {
+  text-decoration: none;
+  color: white;
+}
+
+.products-button {
+  text-align: center;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: "Lexend Tera";
+
+  text-transform: capitalize;
+}
+
+.button-container:hover {
+  background: rgb(149, 201, 188);
+}
+
+.balls {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMAGES ROW ENDS*/
+
+/* FOOTER SECTION */
+
+.footer-section {
+  height: 26vh;
+  background: rgb(63, 62, 62);
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.footer-text {
+  color: white;
+  font-family: "Lexend Tera";
+  font-size: 0.9rem;
+}
+
+.footer-name {
+  color: rgb(153, 202, 190);
+  font-size: 0.8rem;
+}
+
+.developed {
+  font-family: "Lexend Tera";
+  padding: 0.1rem;
+  color: white;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+/* FOOTER SECTION ENDS */
+
+/* PRODUCT PAGE SECTION */
+
+.product-section {
+  height: 100vh;
+
+  background: rgb(255, 222, 192);
+  display: grid;
+  place-items: center;
+}
+
+.productstitle-container {
+  background: rgb(153, 202, 190);
+  height: 50vh;
+}
+
+.products {
+  margin-top: 15rem;
+  color: white;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+.products-title {
+  font-size: 4rem;
+  display: grid;
+  place-items: center;
+  font-family: "Lexend Tera";
+}
+
+/* ASK US SECTION */
+
+.questions {
+  background: rgb(153, 202, 190);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1rem;
+  font-family: "Lexend Tera";
+  margin-right: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+.section-question {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  margin-top: -6rem;
+}
+
+.question {
+  margin-top: 2rem;
+  width: 30%;
+  border-radius: 0.2rem;
+  background-color: white;
+  margin-right: 5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.question-title {
+  display: flex;
+  justify-items: center;
+}
+
+.question-text {
+  color: rgb(135, 152, 156);
+  font-family: "Lexend Tera";
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.question-title p {
+  color: rgb(61, 161, 148);
+  font-size: 0.9rem;
+  border-bottom: 0.1rem solid rgb(78, 73, 73);
+  font-family: "Lexend Tera";
+}
+.question-btn {
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+
+.plus-icon {
+  color: rgb(61, 161, 148);
+}
+.minus-icon {
+  color: rgb(61, 161, 148);
+  display: none;
+}
+
+.show .question-text {
+  display: block;
+}
+
+.show .minus-icon {
+  display: inline-block;
+}
+
+.show .plus-icon {
+  display: none;
+}
+.contact {
+  background: white;
+  display: flex;
+  max-width: 65vw;
+  margin: 4rem 23rem;
+}
+
+.contact-item {
+  margin-bottom: 1.75rem;
+  margin-left: 1.5rem;
+  margin-right: 3rem;
+  margin-top: 4rem;
+}
+
+.contact-info {
+  max-width: 1200px;
+  margin-top: 2rem;
+  font-family: "Lexend Tera";
+
+  font-size: 0.9rem;
+}
+
+.contact-icon {
+  color: rgb(153, 202, 190);
+}
+
+.contact-title {
+  color: rgb(103, 148, 142);
+  font-weight: 200px;
+  font-family: "Lexend Tera";
+}
+.contact-text {
+  text-transform: uppercase;
+}
+
+.contact-form {
+  background: rgb(218, 218, 221);
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: rgb(103, 148, 142);
+  font-family: "Lexend Tera";
+}
+
+.article-title h4 {
+  color: white;
+}
+
+.form-group {
+  padding: 1rem 1.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: white;
+  text-transform: uppercase;
+}
+
+.form-control::placeholder {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(90, 133, 130);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  background: rgb(153, 202, 190);
+}
+
+.submit:hover {
+  background: rgb(187, 226, 216);
+}
+
+/* ABOUT US PAGE SECTION */
+
+.abouttitle-container {
+  background: rgb(255, 223, 194);
+
+  height: 50vh;
+  position: relative;
+}
+
+.about-us {
+  margin-top: 15rem;
+  color: white;
+  z-index: 1;
+  font-size: 2.5rem;
+}
+
+.abouttitle-title {
+  font-size: 4rem;
+  display: grid;
+  place-items: center;
+  font-family: "Lexend Tera";
+
+  height: 100%;
+}
+
+.about-us {
+  margin-top: 15rem;
+  color: white;
+  z-index: 1;
+}
+
+.aboutpage-container {
+  height: 100vh;
+  background-color: rgb(153, 202, 190);
+  display: grid;
+  place-items: center;
+}
+
+.aboutus-container {
+  display: grid;
+  place-items: center;
+
+  width: 65vw;
+
+  border-radius: 1rem;
+  margin-top: 7rem;
+  z-index: 1;
+}
+
+.aboutpage-title {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: "Lexend Tera";
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.aboutpage-text {
+  color: white;
+  font-size: 0.8rem;
+  font-family: "Lexend Tera";
+  width: 70%;
+  margin: 0 auto;
+}
+.about-icon:hover a {
+  color: rgb(149, 201, 188);
+}
+
+.about-icon:hover {
+  color: rgb(149, 201, 188);
+}
+
+/* ABOUT US PAGE SECTION ENDS*/
+
+/* GENERAL MEDIA QUERIES */
+
+@media screen and (max-width: 880px) {
+  .product-btn {
+    display: none;
+  }
+
+  .info-container {
+    display: none;
+  }
+
+  .menu-list {
+    display: none;
+  }
+
+  .aboutus-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    color: white;
+    font-family: "Lexend Tera";
+    font-size: 1rem;
+  }
+
+  .about-text {
+    max-width: 80%;
+    margin: 2rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .article-title h4 {
+    font-size: 2rem;
+    max-width: 50%;
+    margin-left: 1.5rem;
+  }
+
+  .question {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: 7rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    margin-right: 5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    font-family: "Lexend Tera";
+    margin-right: 7rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    color: white;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content-title {
+    margin-left: 0rem;
+  }
+
+  .aboutus-info {
+    padding-bottom: 1rem;
+  }
+
+  .question {
+    margin-top: 2rem;
+    width: 80%;
+    margin-left: 2rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    margin-right: 5rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 37%;
+    bottom: 22%;
+    transition: ease-in 0.3s 0.3s;
+  }
+
+  .products-button {
+    text-align: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 1rem;
+    font-family: "Lexend Tera";
+
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .shownav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .shownav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 40%;
+    bottom: 22%;
+    transition: ease-in 0.3s 0.3s;
+  }
+
+  .products-button {
+    text-align: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-family: "Lexend Tera";
+
+    text-transform: capitalize;
+  }
+}
+/* GENERAL MEDIA QUERIES ENDS */
+
+/* PRODUCT BUTTON RESPONSIVE EXTENDED */
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 29%;
+    bottom: 22%;
+    transition: ease-in 0.3s 0.3s;
+  }
+
+  .products-button {
+    text-align: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0rem;
+    font-family: "Lexend Tera";
+
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 41%;
+    bottom: 30%;
+    transition: ease-in 0.3s 0.3s;
+  }
+
+  .products-button {
+    text-align: center;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 1rem;
+    font-family: "Lexend Tera";
+
+    text-transform: capitalize;
+  }
+}
+
+/* PRODUCT BUTTON RESPONSIVE EXTENDED ENDS */
+
+/* ABOUT US PAGE RESPONSIVE */
+
+@media screen and (min-width: 300px) {
+  .part-2 {
+    display: none;
+  }
+
+  .abouttitle-title {
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    font-family: "Lexend Tera";
+  }
+
+  .about-us {
+    margin-top: 15rem;
+    color: white;
+    z-index: 1;
+  }
+
+  .aboutpage-container {
+    height: 100vh;
+    background-color: rgb(153, 202, 190);
+    display: grid;
+    place-items: center;
+  }
+
+  .aboutus-container {
+    display: grid;
+    place-items: center;
+
+    width: 100vw;
+
+    border-radius: 1rem;
+    margin-top: 7rem;
+    z-index: 1;
+  }
+
+  .aboutpage-title {
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: "Lexend Tera";
+    color: white;
+  }
+
+  .aboutpage-text {
+    color: white;
+    font-size: 0.8rem;
+    font-family: "Lexend Tera";
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .about-baby {
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .part-2 {
+    display: block;
+  }
+
+  .about-baby {
+    height: 35vh;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .about-baby {
+    height: 40vh;
+    margin-left: -1rem;
+  }
+
+  .abouttitle-title {
+    font-size: 4rem;
+    display: grid;
+    place-items: center;
+    font-family: "Lexend Tera";
+  }
+
+  .about-us {
+    margin-top: 15rem;
+    color: white;
+    z-index: 1;
+  }
+
+  .aboutpage-container {
+    height: 100vh;
+    background-color: rgb(153, 202, 190);
+    display: grid;
+    place-items: center;
+  }
+
+  .aboutus-container {
+    display: grid;
+    place-items: center;
+
+    width: 100vw;
+
+    border-radius: 1rem;
+    margin-top: 7rem;
+    z-index: 1;
+  }
+
+  .aboutpage-title {
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: "Lexend Tera";
+    color: white;
+    margin-bottom: 6rem;
+  }
+
+  .aboutpage-text {
+    color: white;
+    font-size: 0.8rem;
+    font-family: "Lexend Tera";
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 38%;
+    bottom: 22%;
+    transition: ease-in 0.3s 0.3s;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .button-container {
+    position: absolute;
+
+    border: 0.2rem solid white;
+    left: 43%;
+    bottom: 22%;
+    transition: ease-in 0.3s 0.3s;
+  }
+
+  .about-us {
+    margin-top: 15rem;
+    color: white;
+    z-index: 1;
+  }
+  .aboutpage-title {
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: "Lexend Tera";
+    color: white;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+
+  .aboutpage-text {
+    font-size: 1rem;
+  }
+}
+
+/* ABOUT US PAGE RESPONSIVE ENDS*/
+
+/* CONTACT US RESPONSIVE */
+
+@media screen and (min-width: 300px) {
+  .contact {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin: 4rem 23rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.75rem;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    font-family: "Lexend Tera";
+
+    font-size: 0.2rem;
+  }
+
+  .contact-icon {
+    color: rgb(153, 202, 190);
+    margin-left: -23rem;
+  }
+
+  .contact-title {
+    color: rgb(103, 148, 142);
+    font-weight: 300px;
+    font-family: "Lexend Tera";
+  }
+  .contact-text {
+    text-transform: uppercase;
+    margin-left: -23rem;
+    font-size: 0.6rem;
+    max-width: 2000px;
+  }
+
+  .contact-form {
+    background: rgb(218, 218, 221);
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: -18rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    margin: 4rem 23rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.75rem;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    font-family: "Lexend Tera";
+
+    font-size: 0.9rem;
+  }
+
+  .contact-icon {
+    color: rgb(153, 202, 190);
+    margin-left: -15rem;
+  }
+
+  .contact-title {
+    color: rgb(103, 148, 142);
+    font-weight: 300px;
+    font-family: "Lexend Tera";
+  }
+  .contact-text {
+    text-transform: uppercase;
+    margin-left: -15rem;
+  }
+
+  .contact-form {
+    background: rgb(218, 218, 221);
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: -15rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .contact {
+    background: white;
+    display: flex;
+    flex-direction: row;
+
+    width: 65vw;
+    margin: 4rem 23rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.75rem;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+    font-family: "Lexend Tera";
+
+    font-size: 0.9rem;
+  }
+
+  .contact-icon {
+    color: rgb(153, 202, 190);
+    margin-left: -15rem;
+  }
+
+  .contact-title {
+    color: rgb(103, 148, 142);
+    font-weight: 300px;
+    font-family: "Lexend Tera";
+  }
+  .contact-text {
+    text-transform: uppercase;
+    margin-left: -15rem;
+  }
+
+  .contact-form {
+    background: rgb(218, 218, 221);
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 5rem;
+
+    width: 100%;
+  }
+}
+
+/* CONTACT US PAGE RESPONSIVE ENDS*/
+
+/* ASK US RESPONSIVE  */
+
+@media screen and (max-width: 465px) {
+  .section-question {
+    margin-left: 2rem;
+  }
+
+  .title {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-question {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  .title {
+    margin-left: 5rem;
+    margin-top: -16rem;
+  }
+}
+
+/* ASK US RESPONSIVE ENDS  */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  background: var(--clr-white);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  z-index: 999;
+  transition: var(--transition);
+}
+.hide-preloader {
+  z-index: -999;
+  visibility: hidden;
+}
+
+/* ARROW  */
+.top-link {
+  position: fixed;
+  bottom: 3rem;
+  right: 4rem;
+  border: 0.4rem solid rgb(255, 222, 192);
+  border-radius: 1.5rem;
+  background-color: rgb(255, 222, 192);
+  color: rgb(153, 202, 190);
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  visibility: hidden;
+  z-index: -1000;
+  animation: arrow 3s ease-in-out infinite;
+}
+
+.arrow-product {
+  position: fixed;
+  bottom: 3rem;
+  right: 4rem;
+  border: 0.4rem solid rgb(153, 202, 190);
+  border-radius: 1.5rem;
+  background-color: rgb(153, 202, 190);
+  color: white;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  visibility: hidden;
+  z-index: -1000;
+  animation: arrow 3s ease-in-out infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.show-link {
+  visibility: visible;
+  z-index: 1000;
+}
+
+/* ARROW ENDS */
+
+/* PRODUCT SLIDER */
+
+.slider-container {
+  border: 5px solid rgb(149, 201, 188);
+  width: 40vw;
+  margin: 0 auto;
+  height: 60vh;
+  max-width: 80rem;
+  position: relative;
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  transition: all 0.25s ease-in-out;
+}
+.slide-img {
+  height: 100%;
+  width: 100%;
+  object-fit: center/cover;
+}
+.btn-container {
+  margin-top: -10rem;
+  display: flex;
+}
+.prevBtn,
+.nextBtn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 2rem;
+  font-family: "Lexend Tera";
+  cursor: pointer;
+  margin: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: rgb(149, 201, 188);
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0.1rem 0.1rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.prevBtn:hover,
+.nextBtn:hover {
+  color: white;
+}
+
+@media screen and (min-width: 300px) {
+  .slider-container {
+    height: 38vh;
+    width: 40vh;
+  }
+
+  @media screen and (min-width: 576px) {
+    .slider-container {
+      height: 35vh;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .slider-container {
+      height: 38vh;
+      width: 45vh;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .slider-container {
+      height: 60vh;
+    }
+  }
+}
+
+/* PRODUCT SLIDER ENDS */
